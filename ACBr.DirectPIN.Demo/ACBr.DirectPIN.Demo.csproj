@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B7C1E2B-6C1B-4F4A-9B3E-2A6C1B4F4A11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ACBr.DirectPIN.Demo</RootNamespace>
+    <AssemblyName>ACBr.DirectPIN.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
+    <ApplicationIcon>ico\logo_topo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="FrmPdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPdv.Designer.cs">
+      <DependentUpon>FrmPdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfiguracao.Designer.cs">
+      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DadosTransacaoGrid.cs" />
+    <Compile Include="Models\ItemTransacaoGrid.cs" />
+    <Compile Include="Services\DirectPINConfigService.cs" />
+    <Compile Include="Services\DirectPINDemoService.cs" />
+    <Compile Include="Services\PosPrinterConfigService.cs" />
+    <Compile Include="Services\DemoPosPrinterService.cs" />
+    <Compile Include="Helpers\AppIconHelper.cs" />
+    <Compile Include="Helpers\AcbrNativeThread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- PackageReference dispara o download/extração via dotnet restore, mas em projeto
+         old-style (sem Microsoft.NET.Sdk) a injeção automática do Reference de compilação
+         não funciona; por isso o HintPath explícito abaixo aponta direto pro cache do NuGet. -->
+    <PackageReference Include="ACBrLib.Core" Version="1.2.47" />
+    <PackageReference Include="ACBrLib.PosPrinter" Version="1.0.11" />
+    <Reference Include="ACBrLib.Core">
+      <HintPath>$(USERPROFILE)\.nuget\packages\acbrlib.core\1.2.47\lib\net452\ACBrLib.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ACBrLib.PosPrinter">
+      <HintPath>$(USERPROFILE)\.nuget\packages\acbrlib.posprinter\1.0.11\lib\net452\ACBrLib.PosPrinter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmPdv.resx">
+      <DependentUpon>FrmPdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfiguracao.resx">
+      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ico\logo_topo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib.DirectPIN\Lib.DirectPIN.csproj" />
+    <ProjectReference Include="..\Lib.FormsAuxiliares\Lib.FormsAuxiliares.csproj" />
+    <ProjectReference Include="..\Lib.Utils\Lib.Utils.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
