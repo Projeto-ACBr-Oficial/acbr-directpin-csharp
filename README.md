@@ -49,7 +49,7 @@ NuGet (`ACBrLib.Core`, `ACBrLib.PosPrinter`) gera só assemblies gerenciados —
 
 ## Uso
 
-1. Informe o valor da operação e use **Efetuar Pagamento** (assistente Tipo → Modalidade → Parcelas) ou os atalhos (**Débito**, **Crédito**, **Créd. Parc. Estabelecimento**, **Créd. Parc. Emissor**, **PIX**); pagamentos parciais/múltiplos são suportados.
+1. Informe o valor da operação e use **Efetuar Pagamento** (assistente Tipo → Modalidade → Parcelas) ou os atalhos (**Débito**, **Crédito à Vista**, **Crédito Parcelado pelo Estabelecimento**, **Crédito Parcelado pelo Emissor** e **PIX**); pagamentos parciais/múltiplos são suportados.
 2. Preview do comprovante e grid de pagamentos da venda; **Nova venda** limpa a tela.
 3. **Administrativo:** Cancelar/Confirmar/Desfazer por NSU, Abortar operação. O comprovante (`receiptContent`) só é retornado pelas operações `transaction` (mesmo com status `PENDING`) e `cancelTransaction` — `confirmTransaction`/`undoTransaction` nunca retornam comprovante, por isso não há impressão nessas duas.
 4. **Consultar Transações:** consulta por status (CustomerId) ou listagem com filtros (NSU, status, tipo, período).
