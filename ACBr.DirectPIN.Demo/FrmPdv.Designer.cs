@@ -654,7 +654,7 @@ namespace ACBr.DirectPIN.Demo
             this.tabAdmin.Location = new System.Drawing.Point(4, 22);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdmin.Size = new System.Drawing.Size(574, 536);
+            this.tabAdmin.Size = new System.Drawing.Size(574, 547);
             this.tabAdmin.TabIndex = 1;
             this.tabAdmin.Text = "Administrativo";
             this.tabAdmin.UseVisualStyleBackColor = true;
@@ -667,7 +667,7 @@ namespace ACBr.DirectPIN.Demo
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(568, 530);
+            this.tabControl1.Size = new System.Drawing.Size(568, 541);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage2
@@ -681,7 +681,7 @@ namespace ACBr.DirectPIN.Demo
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(560, 504);
+            this.tabPage2.Size = new System.Drawing.Size(560, 515);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Administrativo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -748,7 +748,7 @@ namespace ACBr.DirectPIN.Demo
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(560, 504);
+            this.tabPage3.Size = new System.Drawing.Size(560, 515);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Consultar Transações";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -762,7 +762,7 @@ namespace ACBr.DirectPIN.Demo
             this.gridConsultaTransacoes.Name = "gridConsultaTransacoes";
             this.gridConsultaTransacoes.ReadOnly = true;
             this.gridConsultaTransacoes.RowHeadersVisible = false;
-            this.gridConsultaTransacoes.Size = new System.Drawing.Size(554, 292);
+            this.gridConsultaTransacoes.Size = new System.Drawing.Size(554, 303);
             this.gridConsultaTransacoes.TabIndex = 1;
             // 
             // pnlConsultaTopo
@@ -982,7 +982,7 @@ namespace ACBr.DirectPIN.Demo
             this.tabUtilitarios.Location = new System.Drawing.Point(4, 22);
             this.tabUtilitarios.Name = "tabUtilitarios";
             this.tabUtilitarios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUtilitarios.Size = new System.Drawing.Size(574, 536);
+            this.tabUtilitarios.Size = new System.Drawing.Size(574, 547);
             this.tabUtilitarios.TabIndex = 2;
             this.tabUtilitarios.Text = "Utilitários";
             this.tabUtilitarios.UseVisualStyleBackColor = true;
